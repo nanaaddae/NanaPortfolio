@@ -23,6 +23,6 @@ a:hover {
   text-decoration: underline;
 }
 
-.custom-list a:hover {
+ul.list-group.custom-list li a:hover {
   text-decoration: none;
 }
