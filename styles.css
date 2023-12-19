@@ -34,12 +34,14 @@ ul.list-group.custom-list li a:hover {
   margin: 0;
 }
 
-/* Style the list items */
 .language-list ul li {
-  margin-bottom: 5px;
+  margin-bottom: 8px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
 }
 
-/* Add :hover styles if needed */
+/* Optional: Add Bootstrap classes for additional styling */
 .language-list ul li:hover {
-  background-color: transparent;
+  background-color: #eaeaea;
 }
