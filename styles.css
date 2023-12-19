@@ -26,3 +26,20 @@ a:hover {
 ul.list-group.custom-list li a:hover {
   text-decoration: none;
 }
+
+
+.language-list ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Style the list items */
+.language-list ul li {
+  margin-bottom: 5px;
+}
+
+/* Add :hover styles if needed */
+.language-list ul li:hover {
+  background-color: transparent;
+}
