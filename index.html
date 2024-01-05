@@ -20,6 +20,21 @@
         fill: gray; 
         margin-right: 10px; 
     }
+
+
+     
+    .language-info {
+      display: none;
+      position: absolute;
+      background-color: white;
+      padding: 10px;
+      border: 1px solid #ddd;
+      z-index: 1;
+    }
+
+    .list-inline-item:hover .language-info {
+      display: block;
+    }
   </style>
 </head>
 <body>
@@ -88,18 +103,25 @@
   <h2>Languages</h2>
   <ul class="list-inline custom-list">
     <li class="list-inline-item">
+       <div class="language-info">C++</div>
       <img class="custom-icon" src="cplusplus-svgrepo-com.svg" alt="C++ Icon">
     </li>
     <li class="list-inline-item">
+      <div class="language-info">Java</div>
       <i class="fab fa-java fa-3x align-middle" style="margin-right: 10px;"></i>
     </li>
     <li class="list-inline-item">
+      <div class="language-info">Python</div>
       <i class="fab fa-python fa-3x align-middle" style="margin-right: 10px;"></i>
     </li>
+    
     <li class="list-inline-item">
+              <div class="language-info">C#/div>
       <img class="custom-icon" src="Logo_C_sharp.svg" alt="C# Icon">
     </li>
+    
     <li class="list-inline-item">
+      <div class="language-info">JavaScript</div>
       <i class="fab fa-js fa-3x align-middle" style="margin-right: 10px;"></i>
     </li>
   </ul>
@@ -107,6 +129,8 @@
   <h2 class="mt-4">Frameworks</h2>
   <ul class="list-inline custom-list">
        <li class="list-inline-item">
+        <div class="language-info">Java Spring</div>
+
       <img class="custom-icon" src="spring-3.svg" alt="Spring Icon">
     </li>
   
@@ -115,10 +139,13 @@
     </li>
 
        <li class="list-inline-item">
+        <div class="language-info">Hibernate</div>
       <img class="custom-icon" src="hibernate-ar21.svg" alt="Hibernate Icon">
     </li>
 
       <li class="list-inline-item">
+      <div class="language-info">BootStrap</div>
+
       <img class="custom-icon" src="bootstrap-4.svg" alt="Bootstrap Icon">
     </li>
 
