@@ -1,0 +1,58 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  padding: 20px;
+}
+
+header {
+  background-color: #f0f0f0;
+  padding: 10px;
+  text-align: center;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul.list-group.custom-list li a:hover {
+  text-decoration: none;
+}
+
+
+.language-list ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.language-list ul li {
+  margin-bottom: 8px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Optional: Add Bootstrap classes for additional styling */
+.language-list ul li:hover {
+  background-color: #eaeaea;
+}
+
+.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.card:hover {
+  background-color: #f8f9fa;
+  transform: scale(1.05);
+}
