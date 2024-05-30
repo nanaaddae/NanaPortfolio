@@ -69,7 +69,7 @@ footer a {
 }
 
 .carousel {
-  overflow: hidden;
+  overflow: auto;
 }
 
 .carousel-inner {
