@@ -71,40 +71,9 @@ footer a {
   color: #ffc107;
 }
 
-.carousel-inner {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-
-.carousel-inner .row {
-  width: 100%;
-  margin: 0;
-}
-
-.carousel-item {
-  display: flex;
-  justify-content: center;
-}
-
-.carousel-item.active {
-    transform: translateX(0);
-}
-
-
-.carousel-item.active ~ .carousel-item {
-  transform: translateX(100%); /* Add this line */
-}
-
-.carousel-item.active ~ .carousel-item.active {
-  transform: translateX(0); /* Add this line */
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-  width: 5%;
+.carousel-inner.row
+{
+  margin:0;
 }
 
 .carousel-control-prev-icon,
