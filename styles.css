@@ -75,12 +75,15 @@ footer a {
 .carousel-inner {
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 400px; /* Adjust height as needed */
 }
 
 .carousel-item {
-  flex: 0 0 60%;
-  max-width: 60%;
-  transition: transform 0.6s ease, opacity 0.6s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 .carousel-item.active,
