@@ -75,11 +75,14 @@ footer a {
   overflow: hidden;
 }
 
+.carousel-inner .row {
+  width: 100%;
+  margin: 0;
+}
+
 .carousel-item {
-  flex: 0 0 33.333%; /* Adjust width as needed */
-  max-width: 33.333%; /* Adjust width as needed */
-  height: auto;
-  transition: transform 0.5s ease-in-out; 
+  display: flex;
+  justify-content: center;
 }
 
 .carousel-item.active {
