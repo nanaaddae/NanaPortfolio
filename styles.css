@@ -17,9 +17,8 @@ h1, h2 {
 }
 
 .card {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  transition: background-color 0.3s, transform 0.3s;
+ width: 100%;
+  max-width: 500px;
 }
 
 .card img {
