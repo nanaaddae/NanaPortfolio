@@ -72,16 +72,27 @@ footer a {
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .carousel-item {
   flex: 0 0 33.333%; /* Adjust width as needed */
   max-width: 33.333%; /* Adjust width as needed */
   height: auto;
+  transition: transform 0.5s ease-in-out; 
 }
 
 .carousel-item.active {
-  display: block;
+    transform: translateX(0);
+}
+
+
+.carousel-item.active ~ .carousel-item {
+  transform: translateX(100%); /* Add this line */
+}
+
+.carousel-item.active ~ .carousel-item.active {
+  transform: translateX(0); /* Add this line */
 }
 
 .carousel-control-prev,
