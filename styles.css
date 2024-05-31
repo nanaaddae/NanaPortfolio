@@ -86,8 +86,9 @@ footer a {
   #about-me {
       background-color: #001f3f; /* Dark blue background */
       color: white; /* White text color */
-      padding: 50px 20px; /* Padding for spacing */
+      padding:  20px; /* Padding for spacing */
       border-radius: 8px; /* Rounded corners */
+     margin-top: 30px;
     }
 
     #about-me h2, #about-me h3 {
