@@ -1,97 +1,96 @@
+:root {
+  --bg-color: #0d1117;       /* GitHub Dark style */
+  --card-bg: #161b22;        /* Lighter surface */
+  --accent: #58a6ff;         /* Professional Blue */
+  --text-main: #e6edf3;
+  --text-dim: #8b949e;
+  --border: rgba(255, 255, 255, 0.1);
+}
+
 body {
-  font-family: 'Lato', sans-serif;
-  margin: 0;
-  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: 'Inter', 'Lato', sans-serif;
+  line-height: 1.7;
 }
 
-header {
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+/* --- About Me Section (Bento Style) --- */
+#about-me {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  margin-bottom: 4rem;
 }
 
-.hero {
-  color: black;
+#about-me h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #fff, var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-h1, h2 {
-  color: #333;
-}
-
+/* --- Project Cards (Elevated) --- */
 .card {
-  width: 100%;
-  max-width: 500px;
-}
-
-.card img {
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  background: var(--card-bg) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 16px !important;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .card:hover {
-  background-color: #f8f9fa;
-  transform: scale(1.05);
+  transform: translateY(-10px);
+  border-color: var(--accent) !important;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
 }
 
-.language-info {
-  display: none;
-  background-color: white;
-  padding: 5px;
-  border: 1px solid #ddd;
-  position: absolute;
-  z-index: 1;
-  border-radius: 4px;
+.card-title {
+  color: #fff;
+  font-weight: 700;
 }
 
-.list-inline-item:hover .language-info {
-  display: block;
+.card-text {
+  color: var(--text-dim);
 }
 
-.carousel-item .col-md-4 {
-  padding: 0 15px;
+.btn-primary {
+  background-color: var(--accent);
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: 600;
+}
+
+/* --- Skills Section --- */
+#skills h4 {
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
 }
 
 .custom-icon {
-  width: 3em;
-  height: 3em;
-  fill: gray;
-  margin-right: 10px;
+  width: 45px;
+  height: 45px;
+  filter: grayscale(100%);
+  transition: 0.3s;
 }
 
-footer a:hover {
-  text-decoration: underline;
+.list-inline-item:hover .custom-icon {
+  filter: grayscale(0%);
+  transform: scale(1.2);
 }
 
-footer {
-  background-color: #343a40;
-  padding: 20px 0;
+/* --- Language Tooltip --- */
+.language-info {
+  background: #30363d;
   color: white;
-  text-align: center;
+  border: none;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  padding: 8px 12px;
+  font-size: 0.8rem;
 }
-
-footer a {
-  color: #ffc107;
-}
-
-.carousel-inner.row
-{
-  margin:0;
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-color: #333;
-  border-radius: 50%;
-  padding: 10px;
-}
-
-  #about-me {
-      background-color: #001f3f; /* Dark blue background */
-      color: white; /* White text color */
-      padding:  20px; /* Padding for spacing */
-      border-radius: 8px; /* Rounded corners */
-     margin-top: 30px;
-    }
-
-    #about-me h2, #about-me h3 {
-      margin-top: 0;
-    }
-
