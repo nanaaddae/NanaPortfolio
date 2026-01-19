@@ -24,6 +24,8 @@
 </head>
 <body>
 
+  
+
   <a href="../index.html" class="back">← Back to Portfolio</a>
 
   <header>
@@ -47,7 +49,7 @@
     <h2>Core Features & Implementation</h2>
     
     <h3>1. AI-Driven Ticket Classification & Assignment</h3>
-    <p>Engineered a dedicated Python service layer that integrates a local Llama-3 model (via Ollama or similar) to automatically classify incoming tickets by priority, type (bug/feature/refactor), and estimated effort. Custom parsing logic extracts key details from ticket descriptions, while built-in error fallbacks ensure graceful degradation if the model fails or times out.</p>
+    <p>Engineered a dedicated Python service layer that integrates a local Llama-3 model (via LMSTUDIO or similar) to automatically classify incoming tickets by priority, type (bug/feature/refactor), and estimated effort. Custom parsing logic extracts key details from ticket descriptions, while built-in error fallbacks ensure graceful degradation if the model fails or times out.</p>
     <p>Intelligent assignment logic matches tickets to developers based on parsed skills, past assignments, and workload—reducing manual routing by over 70% in simulated workflows.</p>
 
     <h3>2. Secure RESTful API with Authentication & RBAC</h3>
@@ -56,33 +58,23 @@
       <li><strong>Admin</strong>: Full access (manage users, projects, AI settings)</li>
       <li><strong>Project Manager</strong>: Create/edit tickets, assign tasks, view analytics</li>
       <li><strong>Developer</strong>: View & update assigned tickets only</li>
-    </ul>
-    <p>All endpoints are thoroughly documented with Swagger/OpenAPI for easy testing via Postman.</p>
+    </ul
 
     <h3>3. Responsive React Single Page Application (SPA)</h3>
     <p>Built a dynamic, mobile-first frontend in React that consumes 15+ API endpoints. Features include:</p>
     <ul>
       <li>Advanced query filtering and search (by status, priority, assignee, tags)</li>
       <li>Real-time dashboard analytics (charts for ticket velocity, resolution time, AI accuracy)</li>
-      <li>Drag-and-drop task boards (optional future: React DnD integration)</li>
       <li>Responsive design with Tailwind CSS or custom media queries</li>
     </ul>
   </section>
 
-  <section>
-    <h2>Technical Challenges & Solutions</h2>
-    <ul>
-      <li>Running local LLMs efficiently → Used quantized models and async processing with Celery to avoid blocking the main app.</li>
-      <li>Secure file/attachment handling → Implemented S3 uploads with presigned URLs.</li>
-      <li>Performance on complex queries → Added pagination, caching (Redis), and database indexing.</li>
-    </ul>
-  </section>
+
 
   <section class="gallery">
     <h2>Screenshots / Demo</h2>
     <img src="images/swiftticket/dashboard.png" alt="SwiftTicket Dashboard with Real-Time Analytics"/>
-    <img src="images/swiftticket/ticket-view.png" alt="AI-Classified Ticket Detail View"/>
-    <img src="images/swiftticket/mobile-responsive.png" alt="Mobile View of Task Board"/>
+    <img src="images/ticket-view.png" alt="AI-Classified Ticket Detail View"/>
   </section>
 
   <section>
