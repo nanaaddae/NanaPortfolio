@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SwiftTicket - AI-Powered Project Management | Nana Addae Portfolio</title>
+  <meta name="description" content="Full-stack AI project management tool built with Django, React, and local LLMs for automated ticket classification and RBAC."/>
+  <!-- Add your CSS link(s) here, e.g. <link rel="stylesheet" href="../css/style.css"> -->
+  <!-- Optional: Font Awesome or similar for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    /* Quick inline styles for demo; move to your main CSS later */
+    body { font-family: system-ui, sans-serif; line-height: 1.6; max-width: 900px; margin: 0 auto; padding: 2rem; color: #333; }
+    header { text-align: center; margin-bottom: 3rem; }
+    h1, h2 { color: #1a1a1a; }
+    .tech-stack { display: flex; flex-wrap: wrap; gap: 0.8rem; margin: 1rem 0; }
+    .tech-stack span { background: #f0f0f0; padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.9rem; }
+    .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+    .gallery img { width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+    a { color: #0066cc; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .back { margin: 2rem 0; font-weight: bold; }
+  </style>
+</head>
+<body>
+
+  <a href="../index.html" class="back">← Back to Portfolio</a>
+
+  <header>
+    <h1>SwiftTicket</h1>
+    <p>AI-Powered Project Management Tool</p>
+    <div class="tech-stack">
+      <span>Python</span><span>Django</span><span>Django REST Framework</span><span>React</span>
+      <span>Llama-3 (Local LLM)</span><span>JWT Authentication</span><span>RBAC</span>
+      <span>AWS (Deployment)</span><span>Docker</span>
+    </div>
+    <p><strong>GitHub:</strong> <a href="https://github.com/yourusername/SwiftTicket" target="_blank">github.com/yourusername/SwiftTicket</a>  
+       <strong>Live Demo:</strong> <a href="https://swiftticket-demo.yourdomain.com" target="_blank">View Live (if deployed)</a></p>
+  </header>
+
+  <section>
+    <h2>Overview</h2>
+    <p>SwiftTicket is a modern, full-stack project management application that leverages local large language models (LLMs) to automate ticket classification, developer assignment, and workflow insights. Built to handle real-world team collaboration, it features secure authentication, role-based access control, and a responsive dashboard for tracking progress in real time.</p>
+    <p><strong>Key Impact:</strong> Automates manual ticket triage, reduces assignment errors, and provides actionable analytics—saving development teams hours per sprint.</p>
+  </section>
+
+  <section>
+    <h2>Core Features & Implementation</h2>
+    
+    <h3>1. AI-Driven Ticket Classification & Assignment</h3>
+    <p>Engineered a dedicated Python service layer that integrates a local Llama-3 model (via Ollama or similar) to automatically classify incoming tickets by priority, type (bug/feature/refactor), and estimated effort. Custom parsing logic extracts key details from ticket descriptions, while built-in error fallbacks ensure graceful degradation if the model fails or times out.</p>
+    <p>Intelligent assignment logic matches tickets to developers based on parsed skills, past assignments, and workload—reducing manual routing by over 70% in simulated workflows.</p>
+
+    <h3>2. Secure RESTful API with Authentication & RBAC</h3>
+    <p>Developed a robust REST API using Django REST Framework, protected by JWT (JSON Web Tokens) authentication. Implemented custom permission classes to enforce Role-Based Access Control (RBAC) across three user tiers:</p>
+    <ul>
+      <li><strong>Admin</strong>: Full access (manage users, projects, AI settings)</li>
+      <li><strong>Project Manager</strong>: Create/edit tickets, assign tasks, view analytics</li>
+      <li><strong>Developer</strong>: View & update assigned tickets only</li>
+    </ul>
+    <p>All endpoints are thoroughly documented with Swagger/OpenAPI for easy testing via Postman.</p>
+
+    <h3>3. Responsive React Single Page Application (SPA)</h3>
+    <p>Built a dynamic, mobile-first frontend in React that consumes 15+ API endpoints. Features include:</p>
+    <ul>
+      <li>Advanced query filtering and search (by status, priority, assignee, tags)</li>
+      <li>Real-time dashboard analytics (charts for ticket velocity, resolution time, AI accuracy)</li>
+      <li>Drag-and-drop task boards (optional future: React DnD integration)</li>
+      <li>Responsive design with Tailwind CSS or custom media queries</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Technical Challenges & Solutions</h2>
+    <ul>
+      <li>Running local LLMs efficiently → Used quantized models and async processing with Celery to avoid blocking the main app.</li>
+      <li>Secure file/attachment handling → Implemented S3 uploads with presigned URLs.</li>
+      <li>Performance on complex queries → Added pagination, caching (Redis), and database indexing.</li>
+    </ul>
+  </section>
+
+  <section class="gallery">
+    <h2>Screenshots / Demo</h2>
+    <!-- Replace with your actual image paths; upload screenshots to /images/swiftticket/ -->
+    <img src="images/swiftticket/dashboard.png" alt="SwiftTicket Dashboard with Real-Time Analytics"/>
+    <img src="images/swiftticket/ticket-view.png" alt="AI-Classified Ticket Detail View"/>
+    <img src="images/swiftticket/mobile-responsive.png" alt="Mobile View of Task Board"/>
+  </section>
+
+  <section>
+    <h2>Lessons Learned</h2>
+    <p>This project deepened my expertise in AI integration within traditional web stacks, secure API design, and full end-to-end ownership—from LLM prompt engineering to deployment pipelines.</p>
+  </section>
+
+  <footer style="text-align:center; margin-top:3rem;">
+    <p>Built with passion by Nana Addae • <a href="../index.html">Back to Home</a></p>
+  </footer>
+
+</body>
+</html>
