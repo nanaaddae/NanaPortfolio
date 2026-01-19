@@ -1,96 +1,117 @@
 :root {
-  --bg-color: #0d1117;       /* GitHub Dark style */
-  --card-bg: #161b22;        /* Lighter surface */
-  --accent: #58a6ff;         /* Professional Blue */
-  --text-main: #e6edf3;
-  --text-dim: #8b949e;
+  --bg: #0b0e14;
+  --card-bg: #151b23;
   --border: rgba(255, 255, 255, 0.1);
+  --accent: #3b82f6; /* Electric Blue */
+  --text-primary: #f0f6fc;
+  --text-secondary: #8b949e;
 }
 
 body {
-  background-color: var(--bg-color);
-  color: var(--text-main);
-  font-family: 'Inter', 'Lato', sans-serif;
-  line-height: 1.7;
+  background-color: var(--bg);
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  overflow-x: hidden;
 }
 
-/* --- About Me Section (Bento Style) --- */
-#about-me {
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* --- Hero Section --- */
+.hero-title {
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  letter-spacing: -2px;
+}
+
+.hero-title span {
+  color: var(--accent);
+}
+
+.hero-subtitle {
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+}
+
+/* --- Bento Grid Layout --- */
+.project-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: 250px; /* Base height for bento boxes */
+}
+
+/* Featured card spans 2 columns on desktop */
+@media (min-width: 900px) {
+  .project-card.featured {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+}
+
+.project-card {
   background: var(--card-bg);
   border: 1px solid var(--border);
-  padding: 3rem;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-  margin-bottom: 4rem;
-}
-
-#about-me h2 {
-  font-size: 2.5rem;
-  font-weight: 800;
-  background: linear-gradient(90deg, #fff, var(--accent));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* --- Project Cards (Elevated) --- */
-.card {
-  background: var(--card-bg) !important;
-  border: 1px solid var(--border) !important;
-  border-radius: 16px !important;
+  border-radius: 24px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  position: relative;
   overflow: hidden;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.card:hover {
-  transform: translateY(-10px);
-  border-color: var(--accent) !important;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+.project-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--accent);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
-.card-title {
-  color: #fff;
-  font-weight: 700;
-}
-
-.card-text {
-  color: var(--text-dim);
-}
-
-.btn-primary {
-  background-color: var(--accent);
-  border: none;
-  border-radius: 8px;
-  padding: 10px 20px;
+.tag {
+  font-size: 0.75rem;
+  background: rgba(59, 130, 246, 0.1);
+  color: var(--accent);
+  padding: 4px 12px;
+  border-radius: 100px;
+  width: fit-content;
+  margin-bottom: 15px;
   font-weight: 600;
 }
 
-/* --- Skills Section --- */
-#skills h4 {
-  color: var(--accent);
-  margin-bottom: 1.5rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 0.9rem;
+/* --- Skill Pills --- */
+.skills-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 2rem;
 }
 
-.custom-icon {
-  width: 45px;
-  height: 45px;
-  filter: grayscale(100%);
+.skill-pill {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
   transition: 0.3s;
 }
 
-.list-inline-item:hover .custom-icon {
-  filter: grayscale(0%);
-  transform: scale(1.2);
+.skill-pill:hover {
+  border-color: var(--accent);
+  background: rgba(255, 255, 255, 0.05);
 }
 
-/* --- Language Tooltip --- */
-.language-info {
-  background: #30363d;
-  color: white;
-  border: none;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-  padding: 8px 12px;
-  font-size: 0.8rem;
+.skill-pill i {
+  font-size: 1.2rem;
+  color: var(--accent);
 }
