@@ -1,1 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Real-Time Chat Application | Nana Addae Portfolio</title>
+  <meta name="description" content="Full-stack real-time chat app built with Spring Boot, React, WebSocket/STOMP, JWT authentication, supporting concurrent users, password-protected rooms, and features like typing indicators."/>
+  <!-- Link your main CSS here, e.g. <link rel="stylesheet" href="../css/style.css"> -->
+  <!-- Optional: Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    /* Inline styles for quick demo; migrate to your global CSS */
+    body { font-family: system-ui, sans-serif; line-height: 1.6; max-width: 900px; margin: 0 auto; padding: 2rem; color: #333; }
+    header { text-align: center; margin-bottom: 3rem; }
+    h1, h2 { color: #1a1a1a; }
+    .tech-stack { display: flex; flex-wrap: wrap; gap: 0.8rem; margin: 1rem 0; }
+    .tech-stack span { background: #f0f0f0; padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.9rem; }
+    .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+    .gallery img { width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+    a { color: #0066cc; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .back { margin: 2rem 0; font-weight: bold; }
+  </style>
+</head>
+<body>
 
+  <a href="../index.html" class="back">← Back to Portfolio</a>
+
+  <header>
+    <h1>Real-Time Chat Application</h1>
+    <p>Full-Stack Instant Messaging Platform with WebSocket Support</p>
+    <div class="tech-stack">
+      <span>Java</span><span>Spring Boot</span><span>Spring WebSocket</span><span>STOMP</span>
+      <span>React</span><span>JWT Authentication</span><span>SockJS</span>
+      <span>Axios</span><span>Context API</span>
+    </div>
+    <p><strong>GitHub:</strong> <a href="https://github.com/nanaaddae/real-time-chat" target="_blank">Github Link</a>  
+       <strong>Live Demo:</strong> <a href="https://your-chat-demo-link.com" target="_blank">View Live (if deployed)</a></p>
+  </header>
+
+  <section>
+    <h2>Overview</h2>
+    <p>This real-time chat application is a modern, scalable messaging platform that enables instant communication between users in private or password-protected group rooms. Built with Spring Boot on the backend and React on the frontend, it leverages WebSocket with STOMP protocol for bidirectional, low-latency messaging while maintaining strong security through JWT-based authentication.</p>
+    <p><strong>Key Impact:</strong> Supports 100+ concurrent users with features like live typing indicators, online presence tracking, and seamless message delivery—ideal for team collaboration, community chats, or customer support tools.</p>
+  </section>
+
+  <section>
+    <h2>Core Features & Implementation</h2>
+    
+    <h3>1. Real-Time Messaging Engine with WebSocket/STOMP</h3>
+    <p>Engineered the core real-time communication layer using Spring Boot's WebSocket support and STOMP (Simple Text Oriented Messaging Protocol) over SockJS fallback for broad browser compatibility. This enables instant message broadcasting, typing indicators (via periodic "user is typing" events), presence tracking (online/offline status), and live updates without page refreshes.</p>
+    <p>Messages are routed efficiently through destinations like /topic/public (broadcast) and /user/queue/private (targeted delivery), ensuring reliable delivery even under network interruptions.</p>
+
+    <h3>2. Secure Authentication & Protected Rooms</h3>
+    <p>Implemented JWT (JSON Web Tokens) authentication for user sessions, integrated with Spring Security to protect both REST endpoints and WebSocket connections. Users register/login via secure APIs, receive tokens, and must provide valid tokens to connect to WebSocket or join rooms.</p>
+    <p>Added password-protected chat rooms: Room creators set optional passwords, and joining requires validation—preventing unauthorized access while supporting public/open rooms for casual use.</p>
+
+    <h3>3. RESTful API & Responsive React Frontend</h3>
+    <p>Built a comprehensive REST API with 15+ endpoints for user management, room creation/joining, message history retrieval, and profile updates using Spring Boot and Spring Data JPA.</p>
+    <p>On the frontend, developed a responsive Single Page Application (SPA) in React featuring:</p>
+    <ul>
+      <li>Typing indicators and user presence (online/offline badges)</li>
+      <li>Room list sidebar with search and creation</li>
+      <li>State management via React Context API + Axios for API calls + SockJS/STOMP client for WebSocket</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Technical Challenges & Solutions</h2>
+    <ul>
+      <li>Securing WebSocket connections → Extended Spring Security to intercept and validate JWT in WebSocket handshake headers.</li>
+      <li>Message persistence → Stored chat history in database for reload/resume functionality while keeping real-time delivery lightweight.</li>
+    </ul>
+  </section>
+
+  <section class="gallery">
+    <h2>Screenshots / Demo</h2>
+    <img src="images/realtime-chat/chat-interface.png" alt="Real-Time Chat Interface with Messages and Typing Indicator"/>
+    <img src="images/realtime-chat/room-list.png" alt="Protected Rooms List and Join Screen"/>
+    <img src="images/realtime-chat/mobile-view.png" alt="Responsive Mobile Chat View"/>
+  </section>
+
+  <section>
+    <h2>Lessons Learned</h2>
+    <p>This project strengthened my expertise in real-time web architectures, secure bidirectional communication, and integrating frontend state with backend events—skills highly valued in modern collaborative and social applications.</p>
+  </section>
+
+  <footer style="text-align:center; margin-top:3rem;">
+    <p>Built with passion by Nana Addae • <a href="../index.html">Back to Home</a></p>
+  </footer>
+
+</body>
+</html>
