@@ -3,162 +3,104 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <title>Nana Addae | Software Developer</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-  <title>Nana's Portfolio</title>
 </head>
 <body>
 
-  
-<section id="about-me" class="container mt-5 text-center">
-<h2 style="color: white;">About Me</h2>
-    <br>
-    <h3>Hello, I'm Nana Addae!</h3>
-    <p>
-      I am a passionate and dedicated software developer with a strong foundation in computer science and a relentless drive to transform innovative ideas into tangible solutions. I recently graduated with a Bachelor's degree in Computer Science, and I am eager to embark on the next chapter of my professional journey.
-    </p>
+  <header class="container pt-5 text-center">
+    <h1 class="hero-title">Hello, I'm <span>Nana Addae</span></h1>
+    <p class="hero-subtitle">Software Developer specializing in resilient, AI-native systems.</p>
+  </header>
 
-    <h3>My Journey</h3>
-    <p>
-      My interest in technology started at a young age when I first tinkered with a computer and realized the endless possibilities it offered. This curiosity led me to pursue a degree in Computer Science, where I honed my skills in various programming languages including C++, Java, Python, and C#. Throughout my academic career, I tackled complex problems and developed a keen interest in software development, algorithm design, and data structures.
-    </p>
+  <section id="about-me" class="container">
+    <div class="bento-box about-card">
+      <h2>About Me</h2>
+      <p>
+        I am a software developer with a background in Computer Science and a passion for building solutions that matter. 
+        My journey started with a curiosity for how systems work, leading me through C++, Java, and Python.
+      </p>
+    </div>
   </section>
 
+  <section id="projects" class="container">
+    <h2 class="section-title">Selected Projects</h2>
+    
+    <div class="project-grid">
+      
+      <div class="project-card featured">
+        <div class="card-content">
+          <span class="tag">Spring Boot</span>
+          <h3>Task Management System</h3>
+          <p>Full-stack orchestration for team productivity using Java and Thymeleaf.</p>
+          <a href="To-Do/Task.html" class="btn-link">View Project <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
 
-<section id="projects" class="container mt-5">
-  <h2 class="text-center">Projects</h2>
-  <div id="projectCarousel" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
-      <!-- Project Slide 1 -->
-      <div class="carousel-item active">
-        <div class="row justify-content-center">
-          <div class="col-md-6">
-            <div class="card mb-4">
-              <div class="card-body">
-                <h5 class="card-title">Task Management System</h5>
-                <p class="card-text">An application that utilizes Java, Spring Boot, and Thymeleaf to manage tasks.</p>
-                <a href="To-Do/Task.html" class="btn btn-primary">View Project</a>
-              </div>
-            </div>
-          </div>
+      <div class="project-card">
+        <div class="card-content">
+          <span class="tag">Finance</span>
+          <h3>Expense Tracker</h3>
+          <p>Real-time spending analysis with Java Spring.</p>
+          <a href="Expenses/Expenses.html" class="btn-link">Explore</a>
         </div>
       </div>
-      <!-- Project Slide 2 -->
-      <div class="carousel-item">
-        <div class="row justify-content-center">
-          <div class="col-md-6">
-            <div class="card mb-4">
-              <div class="card-body">
-                <h5 class="card-title">Full-Stack Expense Tracker</h5>
-                <p class="card-text">A user-friendly expense tracker application developed in Java and Spring Boot.</p>
-                <a href="Expenses/Expenses.html" class="btn btn-primary">View Project</a>
-              </div>
-            </div>
-          </div>
+
+      <div class="project-card">
+        <div class="card-content">
+          <span class="tag">Python</span>
+          <h3>Omega Bookstore</h3>
+          <p>Desktop management app with data persistence.</p>
+          <a href="Bookstore/Bookstore.html" class="btn-link">Explore</a>
         </div>
       </div>
-      <!-- Project Slide 3 -->
-      <div class="carousel-item">
-        <div class="row justify-content-center">
-          <div class="col-md-6">
-            <div class="card mb-4">
-              <div class="card-body">
-                <h5 class="card-title">Omega BookStore Application</h5>
-                <p class="card-text">Developed a Python book collection management app using Tkinter. Features intuitive interface, data persistence, and search functionality.</p>
-                <a href="Bookstore/Bookstore.html" class="btn btn-primary">View Project</a>
-              </div>
-            </div>
-          </div>
+
+      <div class="project-card">
+        <div class="card-content">
+          <span class="tag">Education</span>
+          <h3>Student Management</h3>
+          <p>Comprehensive system for academic record tracking.</p>
+          <a href="StudentManagement/StudentManagement.html" class="btn-link">Explore</a>
         </div>
       </div>
-      <!-- Project Slide 4 -->
-      <div class="carousel-item">
-        <div class="row justify-content-center">
-          <div class="col-md-6">
-            <div class="card mb-4">
-              <div class="card-body">
-                <h5 class="card-title">Student Management Application</h5>
-                <p class="card-text">A comprehensive Student Management Application.</p>
-                <a href="StudentManagement/StudentManagement.html" class="btn btn-primary">View Project</a>
-              </div>
-            </div>
-          </div>
+
+      <div class="project-card">
+        <div class="card-content">
+          <span class="tag">API</span>
+          <h3>Weather App</h3>
+          <p>Dynamic weather fetching and visualization.</p>
+          <a href="Weather/Weather.html" class="btn-link">Explore</a>
         </div>
       </div>
-      <!-- Project Slide 5 -->
-      <div class="carousel-item">
-        <div class="row justify-content-center">
-          <div class="col-md-6">
-            <div class="card mb-4">
-              <div class="card-body">
-                <h5 class="card-title">Weather Application</h5>
-                <p class="card-text">A simple weather application.</p>
-                <a href="Weather/Weather.html" class="btn btn-primary">View Project</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+
     </div>
-    <!-- Carousel controls -->
-    <a class="carousel-control-prev" href="#projectCarousel" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#projectCarousel" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
-</section>
-  
-<section id="skills" class="container mt-5">
-  <h2 class="text-center">Skills</h2>
-  <div class="row text-center">
-    <div class="col-md-4 mb-4">
-      <h4>Programming Languages</h4>
-      <ul class="list-inline">
-        <li class="list-inline-item mx-2"><img class="custom-icon" src="cplusplus-svgrepo-com.svg" alt="C++ Icon"><div class="language-info">C++</div></li>
-        <li class="list-inline-item mx-2"><i class="fab fa-java fa-3x"></i><div class="language-info">Java</div></li>
-        <li class="list-inline-item mx-2"><i class="fab fa-python fa-3x"></i><div class="language-info">Python</div></li>
-        <li class="list-inline-item mx-2"><img class="custom-icon" src="Logo_C_sharp.svg" alt="C# Icon"><div class="language-info">C#</div></li>
-        <li class="list-inline-item mx-2"><i class="fab fa-js fa-3x"></i><div class="language-info">JavaScript</div></li>
-      </ul>
+  </section>
+
+  <section id="skills" class="container text-center">
+    <h2 class="section-title">Stack</h2>
+    <div class="skills-wrapper">
+      <div class="skill-pill"><i class="fab fa-python"></i> Python</div>
+      <div class="skill-pill"><i class="fab fa-java"></i> Java</div>
+      <div class="skill-pill"><i class="fab fa-js"></i> JavaScript</div>
+      <div class="skill-pill">C++</div>
+      <div class="skill-pill">Spring</div>
+      <div class="skill-pill">.NET</div>
     </div>
+  </section>
 
-    <div class="col-md-4 mb-4">
-      <h4>Frameworks</h4>
-      <ul class="list-inline">
-        <li class="list-inline-item mx-2"><img class="custom-icon" src="spring-3.svg" alt="Spring Icon"><div class="language-info">Java Spring</div></li>
-        <li class="list-inline-item mx-2"><img class="custom-icon" src="dotnet-svgrepo-com.svg" alt=".NET Icon"><div class="language-info">.NET</div></li>
-        <li class="list-inline-item mx-2"><img class="custom-icon" src="hibernate-ar21.svg" alt="Hibernate Icon"><div class="language-info">Hibernate</div></li>
-        <li class="list-inline-item mx-2"><img class="custom-icon" src="bootstrap-4.svg" alt="Bootstrap Icon"><div class="language-info">Bootstrap</div></li>
-      </ul>
+  <footer class="text-center py-5">
+    <p>© 2026 Nana Addae</p>
+    <div class="social-links">
+      <a href="https://github.com/nanaaddae"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/nana-addae"><i class="fab fa-linkedin"></i></a>
     </div>
+  </footer>
 
-    <div class="col-md-4 mb-4">
-      <h4>Web Technologies</h4>
-      <ul class="list-inline">
-        <li class="list-inline-item mx-2"><i class="fab fa-html5 fa-3x" style="color: orange;"></i><div class="language-info">HTML</div></li>
-        <li class="list-inline-item mx-2"><i class="fab fa-css3-alt fa-3x" style="color: blue;"></i><div class="language-info">CSS</div></li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section id="contact" class="container mt-5">
-  <h2 class="text-center">Contact Me</h2>
-  <p class="text-center">If you have any inquiries or would like to get in touch, feel free to reach out to me via email:</p>
-  <p class="lead text-center">Email: <a href="mailto:nana_addae@yahoo.com">nana_addae@yahoo.com</a></p>
-</section>
-
-<footer class="bg-dark text-white text-center py-3 mt-5">
-  <p>© 2024 Nana Addae | <a href="https://github.com/nanaaddae" class="text-white">GitHub</a> | <a href="https://linkedin.com/in/nana-addae-4152781b2/" class="text-white">LinkedIn</a></p>
-</footer>
 </body>
 </html>
